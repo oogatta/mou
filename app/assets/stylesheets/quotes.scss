@@ -1,3 +1,48 @@
-// Place all the styles related to the Quotes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font-family: serif;
+  font-size: 36px;
+  padding: 10px 20px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+.quote {
+  list-style: none;
+  text-align: right;
+  margin: 0 0 60px;
+  padding: 20px;
+}
+.quote span {
+  font-size: 0.8em;
+}
+blockquote {
+  text-align: left;
+  margin: 0;
+  padding: 0.5em 0 0;
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote:after {
+  color: #ccc;
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.operations {
+  margin-top: 60px;
+  font-size:14px;
+  text-align: right;
+}

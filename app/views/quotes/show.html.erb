@@ -1,19 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @quote.body %>
-</p>
+<article data-quote-id="<%= @quote.quote_id %>" class="quote">
+    <blockquote><%= @quote.body %></blockquote>
+    <span>— <%= @quote.sub %></span>
+</article>
 
-<p>
-  <strong>Sub:</strong>
-  <%= @quote.sub %>
+<p class="operations">
+    <%= link_to 'Edit', edit_quote_path(@quote) %> |
+    <%= link_to 'Back', quotes_path %>
 </p>
-
-<p>
-  <strong>Quote:</strong>
-  <%= @quote.quote_id %>
-</p>
-
-<%= link_to 'Edit', edit_quote_path(@quote) %> |
-<%= link_to 'Back', quotes_path %>
