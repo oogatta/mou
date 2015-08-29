@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <article data-quote-id="<%= @quote.quote_id %>" class="quote">
-    <div class="share"><a href="https://twitter.com/share" class="twitter-share-button" data-url="<%= quote_url(@quote) %>" data-text="<%= @quote.body %>" data-size="large" data-count="none">Tweet</a></div>
+    <div class="share"><a href="https://twitter.com/share" class="twitter-share-button" data-url="<%= quote_url(@quote) %>" data-text="<%= @quote.body %>" data-hashtags="モウ様" data-size="large" data-count="none">Tweet</a></div>
     <div class="text">
         <blockquote><%= @quote.body %></blockquote>
         <span>— <%= @quote.sub %></span>
