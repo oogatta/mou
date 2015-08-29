@@ -2,6 +2,8 @@ require 'securerandom'
 
 class QuotesController < ApplicationController
   before_action :set_quote, only: [:show, :edit, :update, :destroy]
+  before_action :set_env
+  before_action :require_editable, except: [:index, :show]
 
   # GET /quotes
   # GET /quotes.json
@@ -73,5 +75,15 @@ class QuotesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def quote_params
       params.require(:quote).permit(:body, :sub)
+    end
+
+    def set_env
+      @editable = Rails.env.development?
+    end
+
+    def require_editable
+      unless @editable
+        redirect_to quotes_url;
+      end
     end
 end

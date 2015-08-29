@@ -12,30 +12,45 @@ ul {
   text-align: right;
   margin: 0 0 60px;
   padding: 20px;
-}
-.quote span {
-  font-size: 0.8em;
+
+  .text {
+    a {
+      display: block;
+    }
+    padding: 0 120px 0 0;
+  }
+
+  .share {
+    float: right;
+    padding: 30px 0 0;
+  }
+
+  span {
+    font-size: 0.8em;
+  }
 }
 blockquote {
   text-align: left;
   margin: 0;
   padding: 0.5em 0 0;
-}
-blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
-blockquote:after {
-  color: #ccc;
-  content: close-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
+
+  &:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+
+  &:after {
+    color: #ccc;
+    content: close-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
 }
 a {
   color: inherit;
