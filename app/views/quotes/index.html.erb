@@ -14,5 +14,5 @@
 <p class="operations"><%= link_to 'New Quote', new_quote_path %></p>
 
 <% if false %>
-    <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Destroy', quote_url(subdomain: 'mou'), method: :delete, data: { confirm: 'Are you sure?' } %></td>
 <% end %>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  constraints(id: /[0-9a-f]{6}/) do
-    resources :quotes
+  constraints(id: /[0-9a-f]{6}/, subdomain: 'mou') do
+    resources :quotes, path: '/'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
